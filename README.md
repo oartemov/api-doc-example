@@ -38,14 +38,14 @@ go run main.go
 Проект построен на принципах **Clean Architecture** с разделением на слои:
 
 ```
+main.go                # Точка входа приложения
 internal/
 ├── handlers/          # HTTP-обработчики (Presentation Layer)
 │   ├── user.go
 │   └── todo.go
-├── models/            # Структуры данных (Domain Layer)
-│   ├── user.go
-│   └── todo.go
-└── main.go            # Точка входа приложения
+└── models/            # Структуры данных (Domain Layer)
+    ├── user.go
+    └── todo.go
 docs/                  # Сгенерированная Swagger-документация
 ```
 
@@ -60,7 +60,7 @@ docs/                  # Сгенерированная Swagger-документ
 ### Создание пользователя
 
 ```bash
-curl -X POST http://localhost:8080/api/users \
+curl -X POST http://localhost:8080/api/v1/users \
   -H "Content-Type: application/json" \
   -d '{
     "email": "ivan@example.com",
