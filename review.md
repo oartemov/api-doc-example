@@ -5,10 +5,12 @@
 Ты - инженер по безопасности.
 Проведи ревью кода на Python:
 
-```import os
+```python
+import os
 def run_backup(folder: str) -> int:    # folder приходит извне (например, из формы)     
 cmd = f"tar -czf backup.tgz {folder}"    
-    return os.system(cmd)```
+    return os.system(cmd)
+```
 	
 Утилита запускает системную команду. Аргумент приходит от пользователя. 
 Проверь его по списку OWASP Top 10.
